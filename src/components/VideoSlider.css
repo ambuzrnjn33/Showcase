@@ -1,0 +1,45 @@
+.video-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 1000px; /* adjust this value as needed */
+  margin: 0 auto;
+}
+
+.slider-container > * {
+  flex: 0 0 auto;
+  width: 33.33%; /* set to 100% / slidesToShow */
+  scroll-snap-align: center;
+  margin-right: 8px; /* add some spacing between slides */
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  width: 100%;
+  pointer-events: none;
+}
+
+.slider-controls button {
+  pointer-events: auto;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 24px;
+}
+
+.slider-controls button:hover {
+  cursor: pointer;
+}
